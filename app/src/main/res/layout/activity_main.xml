@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/red_evict_china"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/red_evict_china_light"
+                ads:contentInsetStartWithNavigation="0dp"
+                ads:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                ads:theme="@style/Toolbar.Light">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/robotoslabbold"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:layout_constraintBottom_toTopOf="@id/content_part"
+                ads:layout_constraintTop_toTopOf="parent"
+                ads:layout_constraintVertical_weight="22">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    ads:cardBackgroundColor="@color/red_evict_china_light"
+                    ads:layout_constraintBottom_toBottomOf="parent"
+                    ads:layout_constraintEnd_toEndOf="parent"
+                    ads:layout_constraintStart_toStartOf="parent"
+                    ads:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/scan_now_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/robotoslabbold"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="List Of Chinese Apps"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_22ssp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/content_part"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintTop_toBottomOf="@id/top_part"
+                ads:layout_constraintVertical_weight="67">
+
+
+                <TextView
+                    android:id="@+id/app_found_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/robotoslabbold"
+                    android:text="1 China Apps Found"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    ads:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/app_found_count"
+                    android:layout_marginTop="15.0dip"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"
+                    ads:layout_constraintBottom_toBottomOf="parent"
+                    ads:layout_constraintTop_toBottomOf="@id/app_found_count" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/conNoApps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    ads:layout_constraintBottom_toBottomOf="parent"
+                    ads:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ivCongrats"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        ads:layout_constraintLeft_toLeftOf="parent"
+                        ads:layout_constraintRight_toRightOf="parent"
+                        ads:layout_constraintTop_toTopOf="parent"
+                        ads:srcCompat="@drawable/ic_congrats" />
+
+                    <TextView
+                        android:id="@+id/tvCongrats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:text="Congratulations"
+                        android:fontFamily="@font/robotoslabregular"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_25sdp"
+                        android:textStyle="bold"
+                        ads:layout_constraintTop_toBottomOf="@id/ivCongrats" />
+
+
+                    <TextView
+                        android:id="@+id/tvNoApps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/robotoslabregular"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:text="No Chinese App Found on your device"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold"
+                        ads:layout_constraintTop_toBottomOf="@id/tvCongrats" />
+
+
+                    <Button
+                        android:id="@+id/btnShare"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:fontFamily="@font/robotoslabregular"
+                        android:paddingTop="15.0dip"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:paddingBottom="15.0dip"
+                        android:text="SHARE Download URL"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:theme="@style/Widget.AppCompat.Button.Colored"
+                        ads:layout_constraintEnd_toEndOf="parent"
+                        ads:layout_constraintStart_toStartOf="parent"
+                        ads:layout_constraintTop_toBottomOf="@id/tvNoApps" />
+
+
+                    <Button
+                        android:id="@+id/btnShareAPK"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:fontFamily="@font/robotoslabregular"
+                        android:paddingTop="15.0dip"
+                        android:paddingBottom="15.0dip"
+                        android:text="SHARE APK FILE"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:textAllCaps="true"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:theme="@style/Widget.AppCompat.Button.Colored"
+                        ads:layout_constraintBottom_toBottomOf="parent"
+                        ads:layout_constraintEnd_toEndOf="parent"
+                        ads:layout_constraintStart_toStartOf="parent"
+                        ads:layout_constraintTop_toBottomOf="@+id/btnShare" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    ads:layout_constraintBottom_toBottomOf="parent"
+                    ads:layout_constraintLeft_toLeftOf="parent"
+                    ads:layout_constraintRight_toRightOf="parent"
+                    ads:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

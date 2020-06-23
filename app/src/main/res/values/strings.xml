@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Evict China</string>
+    <string name="app_found_count">%1$d China Apps Found</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
+    <string name="start">Update</string>
+    <string name="completed">Completed</string>
+    <string name="pause">Pause</string>
+    <string name="cancel">Cancel</string>
+    <string name="resume">Resume</string>
+    <string name="redownload">Retry</string>
+    <string name="restart">Restart</string>
+    <string name="some_error_occurred">Some error occurred</string>
+    <string name="report_error">Report Error</string>
+    <string name="developer">www.VishnuSivadas.com</string>
+    <string name="share">Share</string>
+</resources>

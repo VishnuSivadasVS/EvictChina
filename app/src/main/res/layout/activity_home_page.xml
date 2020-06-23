@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red_evict_china"
+        android:orientation="vertical"
+        tools:context=".ui.HomePageActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme.AppBarOverlay">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/red_evict_china_light"
+                        ads:contentInsetStartWithNavigation="0dp"
+                        ads:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                        ads:theme="@style/Toolbar.Light">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:src="@mipmap/ic_launcher_round"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/toolbar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:text="@string/app_name"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:background="@color/red_evict_china"
+                        android:src="@drawable/evict_china" />
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/tvUninstallApps"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/orange_700"
+                            android:fontFamily="@font/robotoslabbold"
+                            android:letterSpacing=".2"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:text="Uninstall China APPS"
+                            android:textSize="19sp"
+                            android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                        <Button
+                            android:id="@+id/tvUlternativeApp"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:background="@color/green_900"
+                            android:fontFamily="@font/robotoslabbold"
+                            android:letterSpacing=".2"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Alternative APPS"
+                            android:textSize="17sp"
+                            android:theme="@style/Widget.AppCompat.Button.Colored" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/red_evict_china"
+                        android:fontFamily="@font/robotoslabregular"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="5dp"
+                        android:text="Remove Chinese applications and make your move against china"
+                        android:textColor="@color/grey_10"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:drawableLeft="@drawable/ic_share_"
+                        android:id="@+id/ShareAPK"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/robotoslabbold"
+                        android:drawablePadding="7dp"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share APK"
+                        android:drawableStart="@drawable/ic_android" />
+
+                    <Button
+                        android:id="@+id/ShareURL"
+                        android:drawableLeft="@drawable/ic_open"
+                        android:textColor="@color/white"
+                        android:drawablePadding="7dp"
+                        android:fontFamily="@font/robotoslabbold"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share URL"
+                        android:drawableStart="@drawable/ic_open" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:autoLink="web"
+                    android:fontFamily="@font/robotoslabregular"
+                    android:gravity="center"
+                    android:text="Developed By: www.VishnuSivadas.com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

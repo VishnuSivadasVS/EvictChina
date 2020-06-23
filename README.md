@@ -4,6 +4,13 @@
 
 Find and remove chinese applications from your phone and also find an alternative app for it.
 
+<h1 align="center"> EvictChina - Chinese apps remover </h1> <br>
+<p align="center">
+  <a href="https://github.com/VishnuSivadasVS/EvictChina/releases/download/1.0/EvictChina-release.apk">
+    <img alt="EvictChina - Chinese Apps Remover" title="EvictChina - Chinese Apps Remover" src="https://evictchina.vishnusivadas.com/assets/images/google-play-badge.png" width="450">
+  </a>
+</p>
+
 [![Vishnu Sivadas](https://evictchina.vishnusivadas.com/assets/images/google-play-badge.png?style=flat)](https://github.com/VishnuSivadasVS/EvictChina/releases/download/1.0/EvictChina-release.apk)
 
 ## Authors
